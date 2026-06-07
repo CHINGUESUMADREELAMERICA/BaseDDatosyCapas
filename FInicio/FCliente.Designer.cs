@@ -67,6 +67,7 @@
             label15 = new Label();
             txtContraActual = new TextBox();
             pbLogo = new PictureBox();
+            btnVistaTerreno = new Button();
             gbDatosPropietario.SuspendLayout();
             gbDatosTerreno.SuspendLayout();
             gbContraseñas.SuspendLayout();
