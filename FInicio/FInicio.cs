@@ -88,5 +88,10 @@ namespace CapaPresentacion
             // Lógica para Instagram
             MessageBox.Show("Síguenos en Instagram como: @Terranova");
         }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

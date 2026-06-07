@@ -1,4 +1,7 @@
-namespace FInicio
+using CapaPresentacion;
+
+//using FInicio;  
+namespace CapaPresentacion
 {
     internal static class Program
     {
