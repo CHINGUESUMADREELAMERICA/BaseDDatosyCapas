@@ -207,7 +207,6 @@
             label12.Size = new Size(141, 25);
             label12.TabIndex = 11;
             label12.Text = "Total Abonado:";
-            label12.Click += label12_Click;
             // 
             // label13
             // 
@@ -219,7 +218,6 @@
             label13.Size = new Size(125, 25);
             label13.TabIndex = 12;
             label13.Text = "Falta Abonar:";
-            label13.Click += this.label13_Click;
             // 
             // label14
             // 
