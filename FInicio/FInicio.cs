@@ -58,11 +58,7 @@ namespace CapaPresentacion
             base.OnFormClosing(e);
         }
 
-        private void inicioDeSesiónToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-            pictureBox2.Visible = false;
-        }
+
 
         private void acercaDeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -70,20 +66,20 @@ namespace CapaPresentacion
             // acercaDeForm.Show();
         }
 
-        private void teléfonoToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void teléfonoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Lógica para el teléfono
             MessageBox.Show("Número de teléfono: +52 633-129-9913");
         }
 
-        private void whatsAppToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void whatsAppToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Lógica para WhatsApp
             MessageBox.Show("Mensajes al WhatsApp: +52 633-129-5818");
 
         }
 
-        private void instagramToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void instagramToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Lógica para Instagram
             MessageBox.Show("Síguenos en Instagram como: @Terranova");
@@ -94,7 +90,20 @@ namespace CapaPresentacion
 
         }
 
-       /* private void btnAcceder_Click(object sender, EventArgs e)
+        private void iniciarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            pictureBox2.Visible = false;
+        }
+
+      
+
+        /*private void contáctanosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
             // Aquí puedes agregar la lógica para validar el usuario y la contraseña
         }
