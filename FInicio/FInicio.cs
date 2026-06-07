@@ -93,5 +93,11 @@ namespace CapaPresentacion
         {
 
         }
+
+       /* private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            // Aquí puedes agregar la lógica para validar el usuario y la contraseña
+        }
+       */
     }
 }

@@ -42,76 +42,37 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
-            salirToolStripMenuItem = new ToolStripMenuItem();
-            acercaDeToolStripMenuItem = new ToolStripMenuItem();
-            contactanosToolStripMenuItem = new ToolStripMenuItem();
-            teléfonoToolStripMenuItem = new ToolStripMenuItem();
-            whatsAppToolStripMenuItem = new ToolStripMenuItem();
-            instagramToolStripMenuItem = new ToolStripMenuItem();
-            inicioDeSesiónToolStripMenuItem = new ToolStripMenuItem();
             label4 = new Label();
-            menuStrip2 = new MenuStrip();
-            salirToolStripMenuItem1 = new ToolStripMenuItem();
-            acercaDeToolStripMenuItem1 = new ToolStripMenuItem();
-            contáctanosToolStripMenuItem = new ToolStripMenuItem();
-            inicioDeSesiónToolStripMenuItem1 = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            menuStrip2.SuspendLayout();
             SuspendLayout();
             // 
-<<<<<<< HEAD
+
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Cliente", "Empleado", "Gerente" });
-            comboBox1.Location = new Point(250, 49);
-=======
+
             // menuStrip1
             // 
             menuStrip1.AutoSize = false;
             menuStrip1.BackColor = Color.FromArgb(140, 74, 30);
             menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioDeSesiónToolStripMenuItem, contactosToolStripMenuItem, acercaDeToolStripMenuItem, salirToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 2, 0, 2);
             menuStrip1.Size = new Size(840, 115);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // inicioDeSesiónToolStripMenuItem
-            // 
-            inicioDeSesiónToolStripMenuItem.Name = "inicioDeSesiónToolStripMenuItem";
-            inicioDeSesiónToolStripMenuItem.Size = new Size(131, 111);
-            inicioDeSesiónToolStripMenuItem.Text = "Inicio de Sesión";
-            // 
-            // contactosToolStripMenuItem
-            // 
-            contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            contactosToolStripMenuItem.Size = new Size(93, 111);
-            contactosToolStripMenuItem.Text = "Contactos";
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(103, 111);
-            acercaDeToolStripMenuItem.Text = "Acerca de...";
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(53, 111);
-            salirToolStripMenuItem.Text = "Salir";
+    
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(280, 184);
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(364, 30);
@@ -119,11 +80,8 @@
             // 
             // textBox1
             // 
-<<<<<<< HEAD
             textBox1.Location = new Point(250, 136);
-=======
             textBox1.Location = new Point(284, 284);
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(446, 28);
@@ -131,11 +89,8 @@
             // 
             // textBox2
             // 
-<<<<<<< HEAD
             textBox2.Location = new Point(250, 187);
-=======
             textBox2.Location = new Point(284, 335);
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             textBox2.Margin = new Padding(4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(446, 28);
@@ -148,11 +103,8 @@
             label1.Location = new Point(25, 54);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-<<<<<<< HEAD
             label1.Size = new Size(208, 28);
-=======
             label1.Size = new Size(160, 22);
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             label1.TabIndex = 4;
             label1.Text = "Identifica tu puesto";
             // 
@@ -179,17 +131,16 @@
             // btnAcceder
             // 
             btnAcceder.BackColor = Color.FromArgb(140, 74, 30);
-<<<<<<< HEAD
+
             btnAcceder.FlatStyle = FlatStyle.Popup;
             btnAcceder.Font = new Font("Noto Sans Georgian Bold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = SystemColors.ControlLightLight;
             btnAcceder.Location = new Point(535, 280);
-=======
+
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = SystemColors.ControlLightLight;
             btnAcceder.Location = new Point(571, 412);
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             btnAcceder.Margin = new Padding(4);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(161, 54);
@@ -247,55 +198,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 39;
             pictureBox1.TabStop = false;
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(63, 95);
-            salirToolStripMenuItem.Text = "Salir";
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            acercaDeToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
-            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(124, 95);
-            acercaDeToolStripMenuItem.Text = "Acerca de...";
-            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem1_Click;
-            // 
-            // contactanosToolStripMenuItem
-            // 
-            contactanosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { teléfonoToolStripMenuItem, whatsAppToolStripMenuItem, instagramToolStripMenuItem });
-            contactanosToolStripMenuItem.ForeColor = Color.White;
-            contactanosToolStripMenuItem.Name = "contactanosToolStripMenuItem";
-            contactanosToolStripMenuItem.Size = new Size(133, 95);
-            contactanosToolStripMenuItem.Text = "Contáctanos";
-            // 
-            // teléfonoToolStripMenuItem
-            // 
-            teléfonoToolStripMenuItem.Name = "teléfonoToolStripMenuItem";
-            teléfonoToolStripMenuItem.Size = new Size(161, 26);
-            teléfonoToolStripMenuItem.Text = "Teléfono";
-            // 
-            // whatsAppToolStripMenuItem
-            // 
-            whatsAppToolStripMenuItem.Name = "whatsAppToolStripMenuItem";
-            whatsAppToolStripMenuItem.Size = new Size(161, 26);
-            whatsAppToolStripMenuItem.Text = "WhatsApp";
-            // 
-            // instagramToolStripMenuItem
-            // 
-            instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
-            instagramToolStripMenuItem.Size = new Size(161, 26);
-            instagramToolStripMenuItem.Text = "Instagram";
-            // 
-            // inicioDeSesiónToolStripMenuItem
-            // 
-            inicioDeSesiónToolStripMenuItem.ForeColor = SystemColors.ControlLightLight;
-            inicioDeSesiónToolStripMenuItem.Name = "inicioDeSesiónToolStripMenuItem";
-            inicioDeSesiónToolStripMenuItem.Size = new Size(159, 95);
-            inicioDeSesiónToolStripMenuItem.Text = "Inicio de sesión";
-            inicioDeSesiónToolStripMenuItem.Click += inicioDeSesiónToolStripMenuItem1_Click;
+       
             // 
             // label4
             // 
@@ -309,56 +212,15 @@
             label4.Size = new Size(299, 51);
             label4.TabIndex = 8;
             label4.Text = "TERRANOVA";
-            // 
-            // menuStrip2
-            // 
-            menuStrip2.AutoSize = false;
-            menuStrip2.BackColor = Color.FromArgb(140, 74, 30);
-            menuStrip2.Font = new Font("Noto Sans Georgian", 10.1999989F);
-            menuStrip2.ImageScalingSize = new Size(20, 20);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { salirToolStripMenuItem1, acercaDeToolStripMenuItem1, contáctanosToolStripMenuItem, inicioDeSesiónToolStripMenuItem1 });
-            menuStrip2.Location = new Point(0, 0);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.RightToLeft = RightToLeft.Yes;
-            menuStrip2.Size = new Size(1267, 99);
-            menuStrip2.TabIndex = 40;
-            menuStrip2.Text = "menuStrip2";
-            // 
-            // salirToolStripMenuItem1
-            // 
-            salirToolStripMenuItem1.ForeColor = Color.White;
-            salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            salirToolStripMenuItem1.Size = new Size(58, 95);
-            salirToolStripMenuItem1.Text = "Salir";
-            // 
-            // acercaDeToolStripMenuItem1
-            // 
-            acercaDeToolStripMenuItem1.ForeColor = Color.White;
-            acercaDeToolStripMenuItem1.Name = "acercaDeToolStripMenuItem1";
-            acercaDeToolStripMenuItem1.Size = new Size(117, 95);
-            acercaDeToolStripMenuItem1.Text = "Acerca de...";
-            // 
-            // contáctanosToolStripMenuItem
-            // 
-            contáctanosToolStripMenuItem.ForeColor = Color.White;
-            contáctanosToolStripMenuItem.Name = "contáctanosToolStripMenuItem";
-            contáctanosToolStripMenuItem.Size = new Size(125, 95);
-            contáctanosToolStripMenuItem.Text = "Contáctanos";
-            // 
-            // inicioDeSesiónToolStripMenuItem1
-            // 
-            inicioDeSesiónToolStripMenuItem1.ForeColor = SystemColors.ControlLightLight;
-            inicioDeSesiónToolStripMenuItem1.Name = "inicioDeSesiónToolStripMenuItem1";
-            inicioDeSesiónToolStripMenuItem1.Size = new Size(146, 95);
-            inicioDeSesiónToolStripMenuItem1.Text = "Inicio de sesión";
-            inicioDeSesiónToolStripMenuItem1.Click += inicioDeSesiónToolStripMenuItem1_Click;
+
+         
+          
             // 
             // FInicio
             // 
             AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-<<<<<<< HEAD
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1267, 596);
@@ -366,12 +228,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(pbLogo);
             Controls.Add(panel1);
-            Controls.Add(menuStrip2);
             DoubleBuffered = true;
             Font = new Font("Noto Sans Georgian", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            MainMenuStrip = menuStrip2;
-=======
             ClientSize = new Size(840, 562);
             Controls.Add(btnAcceder);
             Controls.Add(label3);
@@ -383,7 +242,6 @@
             Controls.Add(menuStrip1);
             Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip1;
->>>>>>> 313dc7dfebe8d9c25bedc45c31d0c6c3901f41d8
             Margin = new Padding(4);
             Name = "FInicio";
             Text = "Bienvenido a Terranova";
@@ -392,8 +250,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
+        
             ResumeLayout(false);
             PerformLayout();
         }
@@ -408,23 +265,12 @@
         private Button btnAcceder;
         private PictureBox pbLogo;
         private Panel panel1;
-        private MenuStrip menuStrip1;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
      
-        private ToolStripMenuItem salirToolStripMenuItem;
-        private ToolStripMenuItem acercaDeToolStripMenuItem;
-        private ToolStripMenuItem contactanosToolStripMenuItem;
-        private ToolStripMenuItem inicioDeSesiónToolStripMenuItem;
-        private ToolStripMenuItem teléfonoToolStripMenuItem;
-        private ToolStripMenuItem whatsAppToolStripMenuItem;
-        private ToolStripMenuItem instagramToolStripMenuItem;
         private Label label4;
         private PictureBox pictureBox2;
-        private MenuStrip menuStrip2;
-        private ToolStripMenuItem salirToolStripMenuItem1;
-        private ToolStripMenuItem acercaDeToolStripMenuItem1;
-        private ToolStripMenuItem contáctanosToolStripMenuItem;
-        private ToolStripMenuItem inicioDeSesiónToolStripMenuItem1;
+        private MenuStrip menuStrip1;
+     
     }
 }
