@@ -13,13 +13,14 @@ namespace CapaDatos1
         public DbSet<DCliente> Clientes { get; set; }
         public DbSet<DTerreno> Terrenos { get; set; }
         public DbSet<DEmpleado> Empleados { get; set; }
-        //public DbSet<Pago> Pagos { get; set; }
-        //public DbSet<Mensaje> Mensajes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(
-                "Server=(localdb)\\MSSQLLocalDB; Database = DatosV; Trusted_Connection = True;TrustServerCertificate=true;"
+                //si quieren construirlo en sus bases de datos solo cambien el nombre del servidor y
+                //en la consola de herramientas nuget ponen Add-Migration Inicial y luego Update-Database
+                //"Server=(localdb)\\MSSQLLocalDB; Database=TerrenosDB; Trusted_Connection = True;TrustServerCertificate=true;"//Diana
+                //"Server=Maquiavelica1\\SQLEXPRESS;Database=TerrenosDB; Trusted_Connection = True;TrustServerCertificate=true;"//Camila
             );
         }
     }
