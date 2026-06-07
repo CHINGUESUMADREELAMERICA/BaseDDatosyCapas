@@ -42,6 +42,7 @@
             // 
             // tableLayoutPanel
             // 
+            tableLayoutPanel.BackColor = SystemColors.ControlLightLight;
             tableLayoutPanel.ColumnCount = 2;
             tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33F));
             tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 67F));
@@ -63,7 +64,7 @@
             tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel.Size = new Size(556, 407);
+            tableLayoutPanel.Size = new Size(1026, 508);
             tableLayoutPanel.TabIndex = 0;
             // 
             // logoPictureBox
@@ -74,7 +75,7 @@
             logoPictureBox.Margin = new Padding(4, 5, 4, 5);
             logoPictureBox.Name = "logoPictureBox";
             tableLayoutPanel.SetRowSpan(logoPictureBox, 6);
-            logoPictureBox.Size = new Size(175, 397);
+            logoPictureBox.Size = new Size(330, 498);
             logoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             logoPictureBox.TabIndex = 12;
             logoPictureBox.TabStop = false;
@@ -82,11 +83,12 @@
             // labelProductName
             // 
             labelProductName.Dock = DockStyle.Fill;
-            labelProductName.Location = new Point(191, 0);
+            labelProductName.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelProductName.Location = new Point(346, 0);
             labelProductName.Margin = new Padding(8, 0, 4, 0);
             labelProductName.MaximumSize = new Size(0, 26);
             labelProductName.Name = "labelProductName";
-            labelProductName.Size = new Size(361, 26);
+            labelProductName.Size = new Size(676, 26);
             labelProductName.TabIndex = 19;
             labelProductName.Text = "Software: Terranova";
             labelProductName.TextAlign = ContentAlignment.MiddleLeft;
@@ -94,35 +96,39 @@
             // labelVersion
             // 
             labelVersion.Dock = DockStyle.Fill;
-            labelVersion.Location = new Point(191, 40);
+            labelVersion.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelVersion.Location = new Point(346, 50);
             labelVersion.Margin = new Padding(8, 0, 4, 0);
             labelVersion.MaximumSize = new Size(0, 26);
             labelVersion.Name = "labelVersion";
-            labelVersion.Size = new Size(361, 26);
+            labelVersion.Size = new Size(676, 26);
             labelVersion.TabIndex = 0;
-            labelVersion.Text = "Versión 4.0";
+            labelVersion.Text = "Versión 2.0";
             labelVersion.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelCopyright
             // 
             labelCopyright.Dock = DockStyle.Fill;
-            labelCopyright.Location = new Point(191, 80);
+            labelCopyright.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            labelCopyright.Location = new Point(346, 100);
             labelCopyright.Margin = new Padding(8, 0, 4, 0);
             labelCopyright.MaximumSize = new Size(0, 26);
             labelCopyright.Name = "labelCopyright";
-            labelCopyright.Size = new Size(361, 26);
+            labelCopyright.Size = new Size(676, 26);
             labelCopyright.TabIndex = 21;
-            labelCopyright.Text = "Copyright y Derechos reservados a";
+            labelCopyright.Text = "Copyright y derechos reservados a";
             labelCopyright.TextAlign = ContentAlignment.MiddleLeft;
+            labelCopyright.Click += labelCopyright_Click;
             // 
             // labelCompanyName
             // 
             labelCompanyName.Dock = DockStyle.Fill;
-            labelCompanyName.Location = new Point(191, 120);
+            labelCompanyName.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            labelCompanyName.Location = new Point(346, 150);
             labelCompanyName.Margin = new Padding(8, 0, 4, 0);
             labelCompanyName.MaximumSize = new Size(0, 26);
             labelCompanyName.Name = "labelCompanyName";
-            labelCompanyName.Size = new Size(361, 26);
+            labelCompanyName.Size = new Size(676, 26);
             labelCompanyName.TabIndex = 22;
             labelCompanyName.Text = "Binary Code";
             labelCompanyName.TextAlign = ContentAlignment.MiddleLeft;
@@ -130,34 +136,42 @@
             // textBoxDescription
             // 
             textBoxDescription.Dock = DockStyle.Fill;
-            textBoxDescription.Location = new Point(191, 165);
+            textBoxDescription.Font = new Font("Liberation Sans Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxDescription.Location = new Point(346, 205);
             textBoxDescription.Margin = new Padding(8, 5, 4, 5);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.ReadOnly = true;
             textBoxDescription.ScrollBars = ScrollBars.Both;
-            textBoxDescription.Size = new Size(361, 193);
+            textBoxDescription.Size = new Size(676, 244);
             textBoxDescription.TabIndex = 23;
             textBoxDescription.TabStop = false;
-            textBoxDescription.Text = "Descripción";
+            textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
             // 
             // okButton
             // 
             okButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            okButton.BackColor = Color.FromArgb(140, 74, 30);
             okButton.DialogResult = DialogResult.Cancel;
-            okButton.Location = new Point(452, 368);
+            okButton.FlatStyle = FlatStyle.Popup;
+            okButton.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            okButton.ForeColor = SystemColors.ControlLightLight;
+            okButton.Location = new Point(922, 468);
             okButton.Margin = new Padding(4, 5, 4, 5);
             okButton.Name = "okButton";
-            okButton.Size = new Size(100, 34);
+            okButton.Size = new Size(100, 35);
             okButton.TabIndex = 24;
             okButton.Text = "&Aceptar";
+            okButton.UseVisualStyleBackColor = false;
+            okButton.Click += okButton_Click;
             // 
             // AboutBox1
             // 
             AcceptButton = okButton;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(580, 435);
+            BackColor = Color.FromArgb(140, 74, 30);
+            ClientSize = new Size(1050, 536);
             Controls.Add(tableLayoutPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4, 5, 4, 5);
@@ -168,7 +182,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "AboutBox1";
+            Text = "Acerca de...";
             tableLayoutPanel.ResumeLayout(false);
             tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();
