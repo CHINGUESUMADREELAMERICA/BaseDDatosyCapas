@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FInicio));
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            cmbPuesto = new ComboBox();
+            txtNombre = new TextBox();
+            txtContraseña = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -58,31 +58,31 @@
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // comboBox1
+            // cmbPuesto
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Cliente", "Empleado", "Gerente" });
-            comboBox1.Location = new Point(269, 56);
-            comboBox1.Margin = new Padding(4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(364, 30);
-            comboBox1.TabIndex = 1;
+            cmbPuesto.FormattingEnabled = true;
+            cmbPuesto.Items.AddRange(new object[] { "Cliente", "Empleado", "Gerente" });
+            cmbPuesto.Location = new Point(269, 56);
+            cmbPuesto.Margin = new Padding(4);
+            cmbPuesto.Name = "cmbPuesto";
+            cmbPuesto.Size = new Size(364, 30);
+            cmbPuesto.TabIndex = 1;
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(269, 154);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(446, 28);
-            textBox1.TabIndex = 2;
+            txtNombre.Location = new Point(269, 154);
+            txtNombre.Margin = new Padding(4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(446, 28);
+            txtNombre.TabIndex = 2;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Location = new Point(269, 205);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(446, 28);
-            textBox2.TabIndex = 3;
+            txtContraseña.Location = new Point(269, 205);
+            txtContraseña.Margin = new Padding(4);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(446, 28);
+            txtContraseña.TabIndex = 3;
             // 
             // label1
             // 
@@ -121,7 +121,7 @@
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = SystemColors.ControlLightLight;
-            btnAcceder.Location = new Point(554, 257);
+            btnAcceder.Location = new Point(531, 270);
             btnAcceder.Margin = new Padding(4);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(161, 54);
@@ -146,16 +146,16 @@
             panel1.BackColor = Color.Linen;
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cmbPuesto);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txtNombre);
+            panel1.Controls.Add(txtContraseña);
             panel1.Controls.Add(btnAcceder);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(29, 131);
             panel1.Name = "panel1";
-            panel1.Size = new Size(723, 358);
+            panel1.Size = new Size(748, 358);
             panel1.TabIndex = 36;
             panel1.Visible = false;
             // 
@@ -165,7 +165,7 @@
             pictureBox2.Image = Properties.Resources.personaytexto;
             pictureBox2.Location = new Point(-2, -2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(723, 402);
+            pictureBox2.Size = new Size(748, 402);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 41;
             pictureBox2.TabStop = false;
@@ -213,6 +213,7 @@
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             salirToolStripMenuItem.Size = new Size(60, 87);
             salirToolStripMenuItem.Text = "Salir";
+            salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -232,19 +233,19 @@
             // teléfonoToolStripMenuItem
             // 
             teléfonoToolStripMenuItem.Name = "teléfonoToolStripMenuItem";
-            teléfonoToolStripMenuItem.Size = new Size(224, 26);
+            teléfonoToolStripMenuItem.Size = new Size(177, 26);
             teléfonoToolStripMenuItem.Text = "Teléfono";
             // 
             // whatsAppToolStripMenuItem
             // 
             whatsAppToolStripMenuItem.Name = "whatsAppToolStripMenuItem";
-            whatsAppToolStripMenuItem.Size = new Size(224, 26);
+            whatsAppToolStripMenuItem.Size = new Size(177, 26);
             whatsAppToolStripMenuItem.Text = "WhatsApp";
             // 
             // instagramToolStripMenuItem
             // 
             instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
-            instagramToolStripMenuItem.Size = new Size(224, 26);
+            instagramToolStripMenuItem.Size = new Size(177, 26);
             instagramToolStripMenuItem.Text = "Instagram";
             // 
             // iniciarSesiónToolStripMenuItem
@@ -287,9 +288,9 @@
         }
 
         #endregion
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private ComboBox cmbPuesto;
+        private TextBox txtNombre;
+        private TextBox txtContraseña;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -298,7 +299,7 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
-     
+   
         private Label label4;
         private PictureBox pictureBox2;
         private MenuStrip menuStrip1;

@@ -122,7 +122,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Noto Sans Georgian Bold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(1024, 40);
+            label5.Location = new Point(839, 49);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(158, 25);
@@ -150,7 +150,6 @@
             label7.Size = new Size(92, 25);
             label7.TabIndex = 6;
             label7.Text = "Dirección";
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -260,7 +259,7 @@
             cmbLoteConsultar.Cursor = Cursors.Hand;
             cmbLoteConsultar.Font = new Font("Noto Sans Georgian", 10.8F);
             cmbLoteConsultar.FormattingEnabled = true;
-            cmbLoteConsultar.Location = new Point(1209, 32);
+            cmbLoteConsultar.Location = new Point(1024, 41);
             cmbLoteConsultar.Margin = new Padding(4);
             cmbLoteConsultar.Name = "cmbLoteConsultar";
             cmbLoteConsultar.Size = new Size(186, 33);
@@ -320,6 +319,7 @@
             // gbDatosTerreno
             // 
             gbDatosTerreno.BackColor = Color.White;
+            gbDatosTerreno.Controls.Add(btnVistaTerreno);
             gbDatosTerreno.Controls.Add(txtFaltaAbonar);
             gbDatosTerreno.Controls.Add(txtTotalAbonado);
             gbDatosTerreno.Controls.Add(txtPagar);
@@ -536,6 +536,21 @@
             pbLogo.TabIndex = 24;
             pbLogo.TabStop = false;
             // 
+            // btnVistaTerreno
+            // 
+            btnVistaTerreno.BackColor = Color.FromArgb(140, 74, 30);
+            btnVistaTerreno.Cursor = Cursors.Hand;
+            btnVistaTerreno.FlatStyle = FlatStyle.Popup;
+            btnVistaTerreno.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVistaTerreno.ForeColor = SystemColors.ControlLightLight;
+            btnVistaTerreno.Location = new Point(1246, 38);
+            btnVistaTerreno.Margin = new Padding(4);
+            btnVistaTerreno.Name = "btnVistaTerreno";
+            btnVistaTerreno.Size = new Size(151, 36);
+            btnVistaTerreno.TabIndex = 22;
+            btnVistaTerreno.Text = "Vista General";
+            btnVistaTerreno.UseVisualStyleBackColor = false;
+            // 
             // FCliente
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -605,5 +620,6 @@
         private Label label15;
         private TextBox txtContraActual;
         private PictureBox pbLogo;
+        private Button btnVistaTerreno;
     }
 }

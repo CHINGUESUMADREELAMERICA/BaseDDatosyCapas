@@ -44,8 +44,6 @@
             pbLogo = new PictureBox();
             gbQueBuscas = new GroupBox();
             btnTerrenos = new Button();
-            label5 = new Label();
-            cmbBuscar = new ComboBox();
             dtgDatos = new DataGridView();
             gbAcciones = new GroupBox();
             btnLimpiar = new Button();
@@ -58,6 +56,9 @@
             label6 = new Label();
             label7 = new Label();
             txtContraActual = new TextBox();
+            lblFiltroFolio = new Label();
+            cmbBuscar = new ComboBox();
+            lblCargo = new Label();
             gbDatosPropietario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             gbQueBuscas.SuspendLayout();
@@ -268,27 +269,6 @@
             btnTerrenos.Text = "Terrenos";
             btnTerrenos.UseVisualStyleBackColor = false;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 320);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 23);
-            label5.TabIndex = 3;
-            label5.Text = "Folio ";
-            // 
-            // cmbBuscar
-            // 
-            cmbBuscar.BackColor = Color.FromArgb(210, 134, 77);
-            cmbBuscar.FlatStyle = FlatStyle.Flat;
-            cmbBuscar.FormattingEnabled = true;
-            cmbBuscar.Location = new Point(70, 315);
-            cmbBuscar.Name = "cmbBuscar";
-            cmbBuscar.Size = new Size(204, 28);
-            cmbBuscar.TabIndex = 23;
-            // 
             // dtgDatos
             // 
             dtgDatos.BackgroundColor = Color.FromArgb(210, 134, 77);
@@ -450,19 +430,55 @@
             txtContraActual.Size = new Size(191, 31);
             txtContraActual.TabIndex = 15;
             // 
+            // lblFiltroFolio
+            // 
+            lblFiltroFolio.AutoSize = true;
+            lblFiltroFolio.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFiltroFolio.Location = new Point(13, 320);
+            lblFiltroFolio.Margin = new Padding(4, 0, 4, 0);
+            lblFiltroFolio.Name = "lblFiltroFolio";
+            lblFiltroFolio.Size = new Size(136, 23);
+            lblFiltroFolio.TabIndex = 35;
+            lblFiltroFolio.Text = "Filtro por folio ";
+            // 
+            // cmbBuscar
+            // 
+            cmbBuscar.BackColor = Color.FromArgb(210, 134, 77);
+            cmbBuscar.Cursor = Cursors.Hand;
+            cmbBuscar.FlatStyle = FlatStyle.Flat;
+            cmbBuscar.FormattingEnabled = true;
+            cmbBuscar.Location = new Point(156, 315);
+            cmbBuscar.Name = "cmbBuscar";
+            cmbBuscar.Size = new Size(204, 28);
+            cmbBuscar.TabIndex = 34;
+            // 
+            // lblCargo
+            // 
+            lblCargo.AutoSize = true;
+            lblCargo.BackColor = Color.FromArgb(140, 74, 30);
+            lblCargo.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            lblCargo.ForeColor = Color.Snow;
+            lblCargo.Location = new Point(154, 57);
+            lblCargo.Margin = new Padding(4, 0, 4, 0);
+            lblCargo.Name = "lblCargo";
+            lblCargo.Size = new Size(154, 23);
+            lblCargo.TabIndex = 19;
+            lblCargo.Text = "Nombre completo";
+            // 
             // FGerente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1496, 634);
+            Controls.Add(lblCargo);
+            Controls.Add(lblFiltroFolio);
+            Controls.Add(cmbBuscar);
             Controls.Add(gbContraseñas);
             Controls.Add(gbAcciones);
             Controls.Add(dtgDatos);
-            Controls.Add(cmbBuscar);
             Controls.Add(gbQueBuscas);
             Controls.Add(pbLogo);
-            Controls.Add(label5);
             Controls.Add(gbDatosPropietario);
             Controls.Add(lbCerrarSesion);
             Controls.Add(lbBienvenido);
@@ -498,9 +514,7 @@
         private Button btnEmpleados;
         private PictureBox pbLogo;
         private GroupBox gbQueBuscas;
-        private Label label5;
         private Button btnTerrenos;
-        private ComboBox cmbBuscar;
         private DataGridView dtgDatos;
         private GroupBox gbAcciones;
         private Button btnEliminar;
@@ -513,5 +527,8 @@
         private Label label6;
         private Label label7;
         private TextBox txtContraActual;
+        private Label lblFiltroFolio;
+        private ComboBox cmbBuscar;
+        private Label lblCargo;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos1.Modelos;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +12,15 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
+
+   
     public partial class FInicio : Form
     {
-        private Image[] imagenes;
+        private Image[] imagenes = Array.Empty<Image>();
         private int indiceActual = 0;
+
+        private NCliente nCliente = new NCliente();
+        private NEmpleado nEmpleado = new NEmpleado();
 
         public FInicio()
         {
@@ -41,7 +48,7 @@ namespace CapaPresentacion
             timer1.Start();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object? sender, EventArgs e)
         {
             indiceActual = (indiceActual + 1) % imagenes.Length;
             MostrarImagen(indiceActual);
@@ -85,9 +92,81 @@ namespace CapaPresentacion
             MessageBox.Show("Síguenos en Instagram como: @Terranova");
         }
 
+ 
+
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string identificacion = txtNombre.Text.Trim();
+                string contrasena = txtContraseña.Text.Trim();
+                string puesto = cmbPuesto.Text; // "Cliente", "Empleado", "Gerente"
 
+                if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(contrasena))
+                {
+                    MessageBox.Show("Ingresa identificación y contraseña.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (puesto == "Cliente")
+                {
+                    var cliente = nCliente.ValidarAcceso(identificacion, contrasena);
+                    if (cliente == null)
+                    {
+                        MessageBox.Show("Identificación o contraseña incorrectos.", "Acceso denegado",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    LimpiarYOcultar();
+                    new FCliente(cliente).ShowDialog();
+                }
+                else
+                {
+                    var empleado = nEmpleado.ValidarAcceso(identificacion, contrasena);
+                    if (empleado == null)
+                    {
+                        MessageBox.Show("Identificación o contraseña incorrectos.", "Acceso denegado",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Verificar que el cargo coincida con el puesto seleccionado
+                    bool esGerente = empleado.Cargo == "Gerente";
+                    if (puesto == "Gerente" && !esGerente)
+                    {
+                        MessageBox.Show("No tienes permisos de gerente.", "Acceso denegado",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (puesto == "Empleado" && esGerente)
+                    {
+                        MessageBox.Show("Selecciona el puesto correcto.", "Aviso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    LimpiarYOcultar();
+                    if (esGerente)
+                        new FGerente(empleado).ShowDialog();
+                    else
+                        new FEmpleado(empleado).ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al iniciar sesión: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void LimpiarYOcultar()
+        {
+            txtNombre.Text = "";
+            txtContraseña.Text = "";
+            cmbPuesto.SelectedIndex = -1;
+            panel1.Visible = false;
         }
 
         private void iniciarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,17 +175,11 @@ namespace CapaPresentacion
             pictureBox2.Visible = false;
         }
 
-      
-
-        /*private void contáctanosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("¿Deseas salir?", "Confirmar",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Application.Exit();
         }
-
-        private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            // Aquí puedes agregar la lógica para validar el usuario y la contraseña
-        }
-       */
     }
 }

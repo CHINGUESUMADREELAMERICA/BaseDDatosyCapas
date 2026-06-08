@@ -23,5 +23,7 @@ namespace CapaDatos1.Modelos
         public DateTime FechaIngreso { get; set; }
         public decimal SueldoSemanal { get; set; }
         public string Turno { get; set; }       // "Matutino" o "Vespertino"
+        public string Contraseña { get; set; }      // agregado para login
+
     }
 }

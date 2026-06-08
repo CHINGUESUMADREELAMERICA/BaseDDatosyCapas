@@ -120,14 +120,14 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
-  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>392, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxoAAAG/CAYAAADfDqEmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF6M/WebHceVpgvzD0+3RJEw5R3KAOW9gaOT96InCBoQhPeWAL0VRUnd
+        vAAADrwBlbxySQAA/7JJREFUeF6M/WebHceVpgvzD0+3RJEw5R3KAOW9gaOT96InCBoQhPeWAL0VRUnd
         PT2nZ95P673u51krMgtSzzkf4oqMSLNz5967at3xLPPUe0uD8f7yULy/NBTvLQ1p+9zKUJxbcju/Mhwf
         qg3FxdWRuLg6HJdWh+PiylBcWnW7ojYQV9fcX1tjmzYY17NdWx2I6+uDcSPb9dVun/avcZ77G715nzOk
         +ZsbdT7jwXwtrj0YV1cG4ir9KvODcXllIK5wPyu+v0vLh+Pi8uG4vDIYF1cG4sPlAb2HixoPxsWlwbi4

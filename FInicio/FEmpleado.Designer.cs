@@ -57,6 +57,7 @@
             lbBienvenido = new Label();
             label5 = new Label();
             pbLogo = new PictureBox();
+            lblCargo = new Label();
             gbContraseñas.SuspendLayout();
             gbAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatos).BeginInit();
@@ -229,9 +230,10 @@
             // cmbBuscar
             // 
             cmbBuscar.BackColor = Color.FromArgb(210, 134, 77);
+            cmbBuscar.Cursor = Cursors.Hand;
             cmbBuscar.FlatStyle = FlatStyle.Flat;
             cmbBuscar.FormattingEnabled = true;
-            cmbBuscar.Location = new Point(76, 313);
+            cmbBuscar.Location = new Point(156, 313);
             cmbBuscar.Name = "cmbBuscar";
             cmbBuscar.Size = new Size(204, 28);
             cmbBuscar.TabIndex = 31;
@@ -418,9 +420,9 @@
             label5.Location = new Point(13, 318);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(55, 23);
+            label5.Size = new Size(136, 23);
             label5.TabIndex = 33;
-            label5.Text = "Folio ";
+            label5.Text = "Filtro por folio ";
             // 
             // pbLogo
             // 
@@ -433,12 +435,26 @@
             pbLogo.TabIndex = 34;
             pbLogo.TabStop = false;
             // 
+            // lblCargo
+            // 
+            lblCargo.AutoSize = true;
+            lblCargo.BackColor = Color.FromArgb(140, 74, 30);
+            lblCargo.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            lblCargo.ForeColor = SystemColors.ButtonHighlight;
+            lblCargo.Location = new Point(156, 55);
+            lblCargo.Margin = new Padding(4, 0, 4, 0);
+            lblCargo.Name = "lblCargo";
+            lblCargo.Size = new Size(65, 23);
+            lblCargo.TabIndex = 19;
+            lblCargo.Text = "Puesto";
+            // 
             // FEmpleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1495, 628);
+            Controls.Add(lblCargo);
             Controls.Add(pbLogo);
             Controls.Add(label5);
             Controls.Add(gbContraseñas);
@@ -494,5 +510,6 @@
         private Label lbBienvenido;
         private Label label5;
         private PictureBox pbLogo;
+        private Label lblCargo;
     }
 }
