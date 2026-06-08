@@ -96,7 +96,7 @@
             // labelVersion
             // 
             labelVersion.Dock = DockStyle.Fill;
-            labelVersion.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelVersion.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelVersion.Location = new Point(346, 50);
             labelVersion.Margin = new Padding(8, 0, 4, 0);
             labelVersion.MaximumSize = new Size(0, 26);
@@ -109,7 +109,7 @@
             // labelCopyright
             // 
             labelCopyright.Dock = DockStyle.Fill;
-            labelCopyright.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            labelCopyright.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             labelCopyright.Location = new Point(346, 100);
             labelCopyright.Margin = new Padding(8, 0, 4, 0);
             labelCopyright.MaximumSize = new Size(0, 26);
@@ -123,7 +123,7 @@
             // labelCompanyName
             // 
             labelCompanyName.Dock = DockStyle.Fill;
-            labelCompanyName.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            labelCompanyName.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             labelCompanyName.Location = new Point(346, 150);
             labelCompanyName.Margin = new Padding(8, 0, 4, 0);
             labelCompanyName.MaximumSize = new Size(0, 26);
@@ -136,7 +136,7 @@
             // textBoxDescription
             // 
             textBoxDescription.Dock = DockStyle.Fill;
-            textBoxDescription.Font = new Font("Liberation Sans Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxDescription.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxDescription.Location = new Point(346, 205);
             textBoxDescription.Margin = new Padding(8, 5, 4, 5);
             textBoxDescription.Multiline = true;
@@ -154,7 +154,7 @@
             okButton.BackColor = Color.FromArgb(140, 74, 30);
             okButton.DialogResult = DialogResult.Cancel;
             okButton.FlatStyle = FlatStyle.Popup;
-            okButton.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            okButton.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             okButton.ForeColor = SystemColors.ControlLightLight;
             okButton.Location = new Point(922, 468);
             okButton.Margin = new Padding(4, 5, 4, 5);

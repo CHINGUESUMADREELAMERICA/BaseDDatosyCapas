@@ -87,11 +87,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Noto Sans Georgian Bold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(31, 58);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(208, 28);
+            label1.Size = new Size(194, 25);
             label1.TabIndex = 4;
             label1.Text = "Identifica tu puesto";
             // 
@@ -221,6 +221,7 @@
             acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             acercaDeToolStripMenuItem.Size = new Size(120, 87);
             acercaDeToolStripMenuItem.Text = "Acerca de...";
+            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
             // 
             // contáctanosToolStripMenuItem
             // 

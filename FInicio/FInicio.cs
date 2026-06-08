@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace CapaPresentacion
 {
 
-   
+
     public partial class FInicio : Form
     {
         private Image[] imagenes = Array.Empty<Image>();
@@ -92,7 +92,7 @@ namespace CapaPresentacion
             MessageBox.Show("Síguenos en Instagram como: @Terranova");
         }
 
- 
+
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
@@ -180,6 +180,12 @@ namespace CapaPresentacion
             if (MessageBox.Show("¿Deseas salir?", "Confirmar",
                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 acercade = new AboutBox1();
+            acercade.Show();
         }
     }
 }
