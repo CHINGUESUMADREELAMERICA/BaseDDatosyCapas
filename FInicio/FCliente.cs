@@ -22,7 +22,7 @@ namespace CapaPresentacion
         {
             try
             {
-                lbBienvenido.Text ="Bienvenid@, " + $"{clienteActual.Nombre} {clienteActual.Apellidos}";
+                lbBienvenido.Text = "Bienvenid@, " + $"{clienteActual.Nombre} {clienteActual.Apellidos}";
                 txtFolioCliente.Text = clienteActual.Folio;
                 txtNombreCompleto.Text = $"{clienteActual.Nombre} {clienteActual.Apellidos}";
                 txtTelefono.Text = clienteActual.Telefono;
@@ -68,7 +68,6 @@ namespace CapaPresentacion
                 txtPrecioVenta.Text = terreno.MontoTotal.ToString("C");
                 txtTotalAbonado.Text = terreno.MontoPagado.ToString("C");
                 txtFaltaAbonar.Text = terreno.Saldo.ToString("C");
-                txtPagar.Text = "";
             }
             catch (Exception ex) { MessageBox.Show("Error al cargar terreno: " + ex.Message); }
         }
@@ -81,7 +80,6 @@ namespace CapaPresentacion
             txtPrecioVenta.Text = "";
             txtTotalAbonado.Text = "";
             txtFaltaAbonar.Text = "";
-            txtPagar.Text = "";
             txtFechaCompra.Value = DateTime.Now;
         }
 
@@ -92,56 +90,6 @@ namespace CapaPresentacion
             catch (Exception ex) { MessageBox.Show("Error: " + ex.Message); }
         }
 
-        // ─── BOTÓN CONFIRMAR PAGO ─────────────────────────────────────────────
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(txtPagar.Text))
-                {
-                    MessageBox.Show("Ingresa el monto a pagar.", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (!decimal.TryParse(txtPagar.Text, out decimal pago) || pago <= 0)
-                {
-                    MessageBox.Show("Ingresa un monto válido.", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                string noTerreno = cmbLoteConsultar.SelectedItem?.ToString();
-                var terrenos = nTerreno.ObtenerPorCliente(clienteActual.Id);
-                var terreno = terrenos.FirstOrDefault(t => t.NoTerreno == noTerreno);
-                if (terreno == null) return;
-
-                if (pago > terreno.Saldo)
-                {
-                    MessageBox.Show($"El pago excede el saldo restante ({terreno.Saldo:C}).", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (MessageBox.Show($"¿Confirmas el pago de {pago:C}?", "Confirmar",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
-
-                terreno.MontoPagado += pago;
-                if (terreno.Saldo == 0)
-                    terreno.Estado = "Liquidado";
-
-                nTerreno.Modificar(terreno);
-                MessageBox.Show("Pago registrado correctamente.", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                cmbLoteConsultar_SelectedIndexChanged(sender, e);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar pago: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         // ─── BOTÓN MODIFICAR (datos del propietario) ──────────────────────────
         private void btnModificar_Click(object sender, EventArgs e)

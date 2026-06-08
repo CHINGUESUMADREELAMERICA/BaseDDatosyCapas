@@ -46,6 +46,7 @@
             btnTerrenos = new Button();
             dtgDatos = new DataGridView();
             gbAcciones = new GroupBox();
+            btnRegistrarPago = new Button();
             btnLimpiar = new Button();
             btnEliminar = new Button();
             btnModificar = new Button();
@@ -72,7 +73,7 @@
             btnClientes.BackColor = Color.FromArgb(140, 74, 30);
             btnClientes.Cursor = Cursors.Hand;
             btnClientes.FlatStyle = FlatStyle.Popup;
-            btnClientes.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClientes.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClientes.ForeColor = SystemColors.ControlLightLight;
             btnClientes.Location = new Point(20, 44);
             btnClientes.Margin = new Padding(4);
@@ -81,11 +82,12 @@
             btnClientes.TabIndex = 15;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
             // 
             // lbBienvenido
             // 
             lbBienvenido.BackColor = Color.FromArgb(140, 74, 30);
-            lbBienvenido.Font = new Font("Noto Serif Armenian", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbBienvenido.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbBienvenido.ForeColor = SystemColors.ControlLightLight;
             lbBienvenido.Location = new Point(-1, 0);
             lbBienvenido.Margin = new Padding(4, 0, 4, 0);
@@ -100,12 +102,12 @@
             lbCerrarSesion.AutoSize = true;
             lbCerrarSesion.BackColor = Color.FromArgb(140, 74, 30);
             lbCerrarSesion.Cursor = Cursors.Hand;
-            lbCerrarSesion.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            lbCerrarSesion.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             lbCerrarSesion.ForeColor = Color.FromArgb(82, 191, 243);
             lbCerrarSesion.Location = new Point(1339, 9);
             lbCerrarSesion.Margin = new Padding(4, 0, 4, 0);
             lbCerrarSesion.Name = "lbCerrarSesion";
-            lbCerrarSesion.Size = new Size(118, 23);
+            lbCerrarSesion.Size = new Size(113, 20);
             lbCerrarSesion.TabIndex = 20;
             lbCerrarSesion.Text = "Cerrar Sesión";
             // 
@@ -120,7 +122,7 @@
             gbDatosPropietario.Controls.Add(label2);
             gbDatosPropietario.Controls.Add(txtFolioGerente);
             gbDatosPropietario.Controls.Add(label3);
-            gbDatosPropietario.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbDatosPropietario.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
             gbDatosPropietario.Location = new Point(12, 96);
             gbDatosPropietario.Margin = new Padding(4);
             gbDatosPropietario.Name = "gbDatosPropietario";
@@ -133,82 +135,82 @@
             // txtCorreo
             // 
             txtCorreo.Cursor = Cursors.Hand;
-            txtCorreo.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtCorreo.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtCorreo.Location = new Point(265, 147);
             txtCorreo.Margin = new Padding(4);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(586, 31);
+            txtCorreo.Size = new Size(586, 27);
             txtCorreo.TabIndex = 18;
             // 
             // txtTelefono
             // 
             txtTelefono.Cursor = Cursors.Hand;
-            txtTelefono.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtTelefono.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtTelefono.Location = new Point(265, 107);
             txtTelefono.Margin = new Padding(4);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(277, 31);
+            txtTelefono.Size = new Size(277, 27);
             txtTelefono.TabIndex = 17;
             // 
             // txtNombreCompleto
             // 
-            txtNombreCompleto.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtNombreCompleto.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtNombreCompleto.Location = new Point(265, 67);
             txtNombreCompleto.Margin = new Padding(4);
             txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(586, 31);
+            txtNombreCompleto.Size = new Size(586, 27);
             txtNombreCompleto.TabIndex = 16;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label4.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label4.Location = new Point(631, 33);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(47, 23);
+            label4.Size = new Size(45, 20);
             label4.TabIndex = 3;
             label4.Text = "Folio";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label1.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label1.Location = new Point(41, 75);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(154, 23);
+            label1.Size = new Size(141, 20);
             label1.TabIndex = 0;
             label1.Text = "Nombre completo";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label2.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label2.Location = new Point(41, 114);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(111, 23);
+            label2.Size = new Size(103, 20);
             label2.TabIndex = 1;
             label2.Text = "No. Teléfono";
             // 
             // txtFolioGerente
             // 
-            txtFolioGerente.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtFolioGerente.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtFolioGerente.Location = new Point(692, 26);
             txtFolioGerente.Margin = new Padding(4);
             txtFolioGerente.Name = "txtFolioGerente";
-            txtFolioGerente.Size = new Size(159, 31);
+            txtFolioGerente.Size = new Size(159, 27);
             txtFolioGerente.TabIndex = 15;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label3.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label3.Location = new Point(41, 151);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(157, 23);
+            label3.Size = new Size(147, 20);
             label3.TabIndex = 2;
             label3.Text = "Correo electrónico";
             // 
@@ -217,7 +219,7 @@
             btnEmpleados.BackColor = Color.FromArgb(140, 74, 30);
             btnEmpleados.Cursor = Cursors.Hand;
             btnEmpleados.FlatStyle = FlatStyle.Popup;
-            btnEmpleados.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEmpleados.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEmpleados.ForeColor = SystemColors.ControlLightLight;
             btnEmpleados.Location = new Point(20, 88);
             btnEmpleados.Margin = new Padding(4);
@@ -226,6 +228,7 @@
             btnEmpleados.TabIndex = 19;
             btnEmpleados.Text = "Empleados";
             btnEmpleados.UseVisualStyleBackColor = false;
+            btnEmpleados.Click += btnEmpleados_Click;
             // 
             // pbLogo
             // 
@@ -244,7 +247,7 @@
             gbQueBuscas.Controls.Add(btnTerrenos);
             gbQueBuscas.Controls.Add(btnEmpleados);
             gbQueBuscas.Controls.Add(btnClientes);
-            gbQueBuscas.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbQueBuscas.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
             gbQueBuscas.Location = new Point(1286, 96);
             gbQueBuscas.Margin = new Padding(4);
             gbQueBuscas.Name = "gbQueBuscas";
@@ -259,7 +262,7 @@
             btnTerrenos.BackColor = Color.FromArgb(140, 74, 30);
             btnTerrenos.Cursor = Cursors.Hand;
             btnTerrenos.FlatStyle = FlatStyle.Popup;
-            btnTerrenos.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTerrenos.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTerrenos.ForeColor = SystemColors.ControlLightLight;
             btnTerrenos.Location = new Point(20, 132);
             btnTerrenos.Margin = new Padding(4);
@@ -268,6 +271,7 @@
             btnTerrenos.TabIndex = 20;
             btnTerrenos.Text = "Terrenos";
             btnTerrenos.UseVisualStyleBackColor = false;
+            btnTerrenos.Click += btnTerrenos_Click;
             // 
             // dtgDatos
             // 
@@ -283,11 +287,12 @@
             // gbAcciones
             // 
             gbAcciones.BackColor = SystemColors.ControlLightLight;
+            gbAcciones.Controls.Add(btnRegistrarPago);
             gbAcciones.Controls.Add(btnLimpiar);
             gbAcciones.Controls.Add(btnEliminar);
             gbAcciones.Controls.Add(btnModificar);
             gbAcciones.Controls.Add(btnAgregar);
-            gbAcciones.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbAcciones.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
             gbAcciones.Location = new Point(1288, 349);
             gbAcciones.Margin = new Padding(4);
             gbAcciones.Name = "gbAcciones";
@@ -297,65 +302,85 @@
             gbAcciones.TabStop = false;
             gbAcciones.Text = "Acciones";
             // 
+            // btnRegistrarPago
+            // 
+            btnRegistrarPago.BackColor = Color.FromArgb(140, 74, 30);
+            btnRegistrarPago.Cursor = Cursors.Hand;
+            btnRegistrarPago.FlatStyle = FlatStyle.Popup;
+            btnRegistrarPago.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrarPago.ForeColor = SystemColors.ControlLightLight;
+            btnRegistrarPago.Location = new Point(18, 214);
+            btnRegistrarPago.Margin = new Padding(4);
+            btnRegistrarPago.Name = "btnRegistrarPago";
+            btnRegistrarPago.Size = new Size(151, 36);
+            btnRegistrarPago.TabIndex = 36;
+            btnRegistrarPago.Text = "Registrar pago";
+            btnRegistrarPago.UseVisualStyleBackColor = false;
+            btnRegistrarPago.Click += btnRegistrarPago_Click;
+            // 
             // btnLimpiar
             // 
             btnLimpiar.BackColor = Color.FromArgb(140, 74, 30);
             btnLimpiar.Cursor = Cursors.Hand;
             btnLimpiar.FlatStyle = FlatStyle.Popup;
-            btnLimpiar.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpiar.ForeColor = SystemColors.ControlLightLight;
-            btnLimpiar.Location = new Point(20, 195);
+            btnLimpiar.Location = new Point(18, 170);
             btnLimpiar.Margin = new Padding(4);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(151, 36);
             btnLimpiar.TabIndex = 21;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.FromArgb(140, 74, 30);
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.FlatStyle = FlatStyle.Popup;
-            btnEliminar.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = SystemColors.ControlLightLight;
-            btnEliminar.Location = new Point(20, 151);
+            btnEliminar.Location = new Point(18, 126);
             btnEliminar.Margin = new Padding(4);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(151, 36);
             btnEliminar.TabIndex = 20;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnModificar
             // 
             btnModificar.BackColor = Color.FromArgb(140, 74, 30);
             btnModificar.Cursor = Cursors.Hand;
             btnModificar.FlatStyle = FlatStyle.Popup;
-            btnModificar.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnModificar.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnModificar.ForeColor = SystemColors.ControlLightLight;
-            btnModificar.Location = new Point(20, 107);
+            btnModificar.Location = new Point(18, 82);
             btnModificar.Margin = new Padding(4);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(151, 36);
             btnModificar.TabIndex = 19;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnAgregar
             // 
             btnAgregar.BackColor = Color.FromArgb(140, 74, 30);
             btnAgregar.Cursor = Cursors.Hand;
             btnAgregar.FlatStyle = FlatStyle.Popup;
-            btnAgregar.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregar.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = SystemColors.ControlLightLight;
-            btnAgregar.Location = new Point(20, 63);
+            btnAgregar.Location = new Point(18, 38);
             btnAgregar.Margin = new Padding(4);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(151, 36);
             btnAgregar.TabIndex = 15;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // gbContraseñas
             // 
@@ -365,7 +390,7 @@
             gbContraseñas.Controls.Add(label6);
             gbContraseñas.Controls.Add(label7);
             gbContraseñas.Controls.Add(txtContraActual);
-            gbContraseñas.Font = new Font("Noto Sans Georgian", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbContraseñas.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
             gbContraseñas.Location = new Point(879, 96);
             gbContraseñas.Margin = new Padding(4);
             gbContraseñas.Name = "gbContraseñas";
@@ -380,7 +405,7 @@
             btnCambiarContraseña.BackColor = Color.FromArgb(140, 74, 30);
             btnCambiarContraseña.Cursor = Cursors.Hand;
             btnCambiarContraseña.FlatStyle = FlatStyle.Popup;
-            btnCambiarContraseña.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCambiarContraseña.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCambiarContraseña.ForeColor = SystemColors.ControlLightLight;
             btnCambiarContraseña.Location = new Point(236, 132);
             btnCambiarContraseña.Margin = new Padding(4);
@@ -389,55 +414,56 @@
             btnCambiarContraseña.TabIndex = 21;
             btnCambiarContraseña.Text = "Aceptar";
             btnCambiarContraseña.UseVisualStyleBackColor = false;
+            btnCambiarContraseña.Click += btnAceptar_Click;
             // 
             // txtContraNueva
             // 
-            txtContraNueva.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtContraNueva.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtContraNueva.Location = new Point(194, 86);
             txtContraNueva.Margin = new Padding(4);
             txtContraNueva.Name = "txtContraNueva";
-            txtContraNueva.Size = new Size(191, 31);
+            txtContraNueva.Size = new Size(191, 27);
             txtContraNueva.TabIndex = 16;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label6.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label6.Location = new Point(8, 57);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(158, 23);
+            label6.Size = new Size(147, 20);
             label6.TabIndex = 3;
             label6.Text = "Contraseña Actual";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            label7.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             label7.Location = new Point(8, 95);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(173, 23);
+            label7.Size = new Size(160, 20);
             label7.TabIndex = 0;
             label7.Text = "Cambiar contraseña";
             // 
             // txtContraActual
             // 
-            txtContraActual.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            txtContraActual.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             txtContraActual.Location = new Point(194, 47);
             txtContraActual.Margin = new Padding(4);
             txtContraActual.Name = "txtContraActual";
-            txtContraActual.Size = new Size(191, 31);
+            txtContraActual.Size = new Size(191, 27);
             txtContraActual.TabIndex = 15;
             // 
             // lblFiltroFolio
             // 
             lblFiltroFolio.AutoSize = true;
-            lblFiltroFolio.Font = new Font("Noto Sans Georgian Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFiltroFolio.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFiltroFolio.Location = new Point(13, 320);
             lblFiltroFolio.Margin = new Padding(4, 0, 4, 0);
             lblFiltroFolio.Name = "lblFiltroFolio";
-            lblFiltroFolio.Size = new Size(136, 23);
+            lblFiltroFolio.Size = new Size(134, 20);
             lblFiltroFolio.TabIndex = 35;
             lblFiltroFolio.Text = "Filtro por folio ";
             // 
@@ -451,17 +477,18 @@
             cmbBuscar.Name = "cmbBuscar";
             cmbBuscar.Size = new Size(204, 28);
             cmbBuscar.TabIndex = 34;
+            cmbBuscar.SelectedIndexChanged += cmbBuscar_SelectedIndexChanged;
             // 
             // lblCargo
             // 
             lblCargo.AutoSize = true;
             lblCargo.BackColor = Color.FromArgb(140, 74, 30);
-            lblCargo.Font = new Font("Noto Sans Georgian", 10.1999989F);
+            lblCargo.Font = new Font("Microsoft Sans Serif", 10.1999989F);
             lblCargo.ForeColor = Color.Snow;
             lblCargo.Location = new Point(154, 57);
             lblCargo.Margin = new Padding(4, 0, 4, 0);
             lblCargo.Name = "lblCargo";
-            lblCargo.Size = new Size(154, 23);
+            lblCargo.Size = new Size(141, 20);
             lblCargo.TabIndex = 19;
             lblCargo.Text = "Nombre completo";
             // 
@@ -530,5 +557,6 @@
         private Label lblFiltroFolio;
         private ComboBox cmbBuscar;
         private Label lblCargo;
+        private Button btnRegistrarPago;
     }
 }

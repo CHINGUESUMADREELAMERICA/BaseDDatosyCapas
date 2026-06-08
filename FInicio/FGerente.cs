@@ -27,7 +27,7 @@ namespace CapaPresentacion
             try
             {
                 // Datos del gerente logueado
-                lbBienvenido.Text = "Bienvenid@"+$"{gerenteActual.Nombre} {gerenteActual.Apellidos}";
+                lbBienvenido.Text = "Bienvenid@" + $"{gerenteActual.Nombre} {gerenteActual.Apellidos}";
                 txtNombreCompleto.Text = $"{gerenteActual.Nombre} {gerenteActual.Apellidos}";
                 txtFolioGerente.Text = gerenteActual.Id.ToString();
 
@@ -127,7 +127,7 @@ namespace CapaPresentacion
         }
 
         // ─── SELECCIONAR FILA ─────────────────────────────────────────────────
-        private void dtgDatos_CellClick (object sender, DataGridViewCellEventArgs e)
+        private void dtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Solo para info — la edición es directa en el grid
         }
@@ -296,6 +296,60 @@ namespace CapaPresentacion
             if (MessageBox.Show("¿Deseas cerrar sesión?", "Confirmar",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
+        }
+
+        //botones a programar
+
+        //contrasenia
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Registro pago
+        private void btnRegistrarPago_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (vistaActual != "Terrenos")
+                {
+                    MessageBox.Show("Selecciona la vista de Terrenos primero.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (dtgDatos.CurrentRow == null)
+                {
+                    MessageBox.Show("Selecciona un terreno de la lista.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var terreno = ((List<DTerreno>)dtgDatos.DataSource)[dtgDatos.CurrentRow.Index];
+
+                if (terreno.EnVenta)
+                {
+                    MessageBox.Show("Este terreno está en venta, no tiene pagos pendientes.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (terreno.Saldo <= 0)
+                {
+                    MessageBox.Show("Este terreno ya está liquidado.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                var fPago = new FPago(terreno);
+                if (fPago.ShowDialog() == DialogResult.OK)
+                    MostrarTerrenos(cmbBuscar.SelectedItem?.ToString()); // refresca el grid
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

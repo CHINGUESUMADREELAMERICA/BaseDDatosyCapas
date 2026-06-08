@@ -124,7 +124,7 @@ namespace CapaPresentacion
                     cmbBuscar.Visible = false;
                     label5.Visible = false;
                     btnAgregar.Visible = false;
-                   btnGuardar.Visible = false;
+                    btnGuardar.Visible = false;
                     btnEliminar.Visible = false;
                     btnLimpiar.Visible = false;
                     break;
@@ -247,5 +247,13 @@ namespace CapaPresentacion
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
         }
+
+        //botones que faltan
+        //acciones
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            btnGuardar_Click(sender, e); 
+        }
+
     }
 }

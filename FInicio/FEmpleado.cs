@@ -31,8 +31,6 @@ namespace CapaPresentacion
                 lblCargo.Text = empleadoActual.Cargo;
 
                 // Empleado no puede agregar ni eliminar
-                btnAgregar.Visible = false;
-                btnEliminar.Visible = false;
 
                 MostrarClientes();
             }
@@ -213,6 +211,53 @@ namespace CapaPresentacion
             if (MessageBox.Show("¿Deseas cerrar sesión?", "Confirmar",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
+        }
+
+
+        //registro pago
+        private void btnRegistrarPago_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (vistaActual != "Terrenos")
+                {
+                    MessageBox.Show("Selecciona la vista de Terrenos primero.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (dtgDatos.CurrentRow == null)
+                {
+                    MessageBox.Show("Selecciona un terreno de la lista.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var terreno = ((List<DTerreno>)dtgDatos.DataSource)[dtgDatos.CurrentRow.Index];
+
+                if (terreno.EnVenta)
+                {
+                    MessageBox.Show("Este terreno está en venta, no tiene pagos pendientes.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (terreno.Saldo <= 0)
+                {
+                    MessageBox.Show("Este terreno ya está liquidado.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                var fPago = new FPago(terreno);
+                if (fPago.ShowDialog() == DialogResult.OK)
+                    MostrarTerrenos(cmbBuscar.SelectedItem?.ToString()); // refresca el grid
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
