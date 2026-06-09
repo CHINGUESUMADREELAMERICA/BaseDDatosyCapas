@@ -32,13 +32,12 @@
             lbBienvenido = new Label();
             lbCerrarSesion = new Label();
             gbDatosPropietario = new GroupBox();
-            txtCorreo = new TextBox();
-            txtTelefono = new TextBox();
+            label5 = new Label();
+            txtApellidos = new TextBox();
+            txtNombre = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            label2 = new Label();
             txtFolioGerente = new TextBox();
-            label3 = new Label();
             btnEmpleados = new Button();
             pbLogo = new PictureBox();
             gbQueBuscas = new GroupBox();
@@ -59,9 +58,6 @@
             lblFiltroFolio = new Label();
             cmbBuscar = new ComboBox();
             lblCargo = new Label();
-            txtNombre = new TextBox();
-            txtApellidos = new TextBox();
-            label5 = new Label();
             gbDatosPropietario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             gbQueBuscas.SuspendLayout();
@@ -120,13 +116,9 @@
             gbDatosPropietario.Controls.Add(label5);
             gbDatosPropietario.Controls.Add(txtApellidos);
             gbDatosPropietario.Controls.Add(txtNombre);
-            gbDatosPropietario.Controls.Add(txtCorreo);
-            gbDatosPropietario.Controls.Add(txtTelefono);
             gbDatosPropietario.Controls.Add(label4);
             gbDatosPropietario.Controls.Add(label1);
-            gbDatosPropietario.Controls.Add(label2);
             gbDatosPropietario.Controls.Add(txtFolioGerente);
-            gbDatosPropietario.Controls.Add(label3);
             gbDatosPropietario.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
             gbDatosPropietario.Location = new Point(12, 96);
             gbDatosPropietario.Margin = new Padding(4);
@@ -137,36 +129,45 @@
             gbDatosPropietario.TabStop = false;
             gbDatosPropietario.Text = "Datos personales";
             // 
-            // txtCorreo
+            // label5
             // 
-            txtCorreo.Cursor = Cursors.Hand;
-            txtCorreo.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            txtCorreo.Location = new Point(265, 147);
-            txtCorreo.Margin = new Padding(4);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(586, 27);
-            txtCorreo.TabIndex = 18;
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 10.1999989F);
+            label5.Location = new Point(41, 132);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 20);
+            label5.TabIndex = 36;
+            label5.Text = "Apellidos";
             // 
-            // txtTelefono
+            // txtApellidos
             // 
-            txtTelefono.Cursor = Cursors.Hand;
-            txtTelefono.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            txtTelefono.Location = new Point(265, 107);
-            txtTelefono.Margin = new Padding(4);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(277, 27);
-            txtTelefono.TabIndex = 17;
+            txtApellidos.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtApellidos.Location = new Point(176, 127);
+            txtApellidos.Margin = new Padding(4);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(291, 28);
+            txtApellidos.TabIndex = 36;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtNombre.Location = new Point(176, 70);
+            txtNombre.Margin = new Padding(4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(291, 28);
+            txtNombre.TabIndex = 26;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            label4.Location = new Point(631, 33);
+            label4.Location = new Point(648, 33);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(45, 20);
+            label4.Size = new Size(26, 20);
             label4.TabIndex = 3;
-            label4.Text = "Folio";
+            label4.Text = "ID";
             // 
             // label1
             // 
@@ -179,17 +180,6 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            label2.Location = new Point(41, 114);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(103, 20);
-            label2.TabIndex = 1;
-            label2.Text = "No. Teléfono";
-            // 
             // txtFolioGerente
             // 
             txtFolioGerente.Font = new Font("Microsoft Sans Serif", 10.1999989F);
@@ -198,17 +188,6 @@
             txtFolioGerente.Name = "txtFolioGerente";
             txtFolioGerente.Size = new Size(159, 27);
             txtFolioGerente.TabIndex = 15;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            label3.Location = new Point(41, 151);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(147, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Correo electrónico";
             // 
             // btnEmpleados
             // 
@@ -488,35 +467,6 @@
             lblCargo.TabIndex = 19;
             lblCargo.Text = "Nombre completo";
             // 
-            // txtNombre
-            // 
-            txtNombre.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtNombre.Location = new Point(130, 67);
-            txtNombre.Margin = new Padding(4);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(291, 28);
-            txtNombre.TabIndex = 26;
-            // 
-            // txtApellidos
-            // 
-            txtApellidos.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtApellidos.Location = new Point(543, 67);
-            txtApellidos.Margin = new Padding(4);
-            txtApellidos.Name = "txtApellidos";
-            txtApellidos.Size = new Size(291, 28);
-            txtApellidos.TabIndex = 36;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            label5.Location = new Point(445, 75);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 20);
-            label5.TabIndex = 36;
-            label5.Text = "Apellidos";
-            // 
             // FGerente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -556,13 +506,9 @@
         private Label lbBienvenido;
         private Label lbCerrarSesion;
         private GroupBox gbDatosPropietario;
-        private TextBox txtCorreo;
-        private TextBox txtTelefono;
         private Label label4;
         private Label label1;
-        private Label label2;
         private TextBox txtFolioGerente;
-        private Label label3;
         private Button btnEmpleados;
         private PictureBox pbLogo;
         private GroupBox gbQueBuscas;

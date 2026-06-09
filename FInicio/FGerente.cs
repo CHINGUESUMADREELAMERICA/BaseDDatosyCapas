@@ -28,8 +28,10 @@ namespace CapaPresentacion
             {
                 // Datos del gerente logueado
                 lbBienvenido.Text = "Bienvenid@" + $"{gerenteActual.Nombre} {gerenteActual.Apellidos}";
-                txtNombreCompleto.Text = $"{gerenteActual.Nombre} {gerenteActual.Apellidos}";
                 txtFolioGerente.Text = gerenteActual.Id.ToString();
+
+                txtNombre.Text = gerenteActual.Nombre;
+                txtApellidos.Text = gerenteActual.Apellidos;
 
                 // Mostrar clientes por defecto
                 MostrarClientes();
@@ -145,9 +147,14 @@ namespace CapaPresentacion
             {
                 if (vistaActual == "Clientes")
                 {
-                    MessageBox.Show("Para agregar clientes contacta al administrador del sistema.",
-                        "No permitido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    var nuevo = new DCliente
+                    {
+                        Folio = "CLI-" + DateTime.Now.Ticks.ToString().Substring(10)
+                    };
+                    var lista = (List<DCliente>)dtgDatos.DataSource;
+                    lista.Add(nuevo);
+                    dtgDatos.DataSource = null;
+                    dtgDatos.DataSource = lista;
                 }
                 else if (vistaActual == "Empleados")
                 {

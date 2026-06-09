@@ -166,6 +166,7 @@
             Controls.Add(btnConfirmar);
             Name = "FPago";
             Text = "Pago";
+            Load += FPago_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
