@@ -26,9 +26,11 @@ namespace CapaPresentacion
             try
             {
                 lbBienvenido.Text = $"Bienvenid@ {empleadoActual.Nombre} {empleadoActual.Apellidos}";
-                txtNombreCompleto.Text = $"{empleadoActual.Nombre} {empleadoActual.Apellidos}";
                 txtFolioEmpleado.Text = empleadoActual.Id.ToString();
                 lblCargo.Text = empleadoActual.Cargo;
+
+                txtNombre.Text = empleadoActual.Nombre;
+                txtApellidos.Text = empleadoActual.Apellidos;
 
                 // Empleado no puede agregar ni eliminar
 
@@ -100,12 +102,18 @@ namespace CapaPresentacion
         {
             try
             {
+                // Desconectar el evento para evitar el ciclo infinito
+                cmbBuscar.SelectedIndexChanged -= cmbBuscar_SelectedIndexChanged;
+
                 cmbBuscar.Items.Clear();
                 cmbBuscar.Items.Add("-- Todos --");
                 foreach (var c in nCliente.ObtenerTodos())
                     if (!string.IsNullOrWhiteSpace(c.Folio))
                         cmbBuscar.Items.Add(c.Folio);
                 cmbBuscar.SelectedIndex = 0;
+
+                // Reconectar el evento
+                cmbBuscar.SelectedIndexChanged += cmbBuscar_SelectedIndexChanged;
             }
             catch (Exception ex) { MessageBox.Show("Error al cargar folios: " + ex.Message); }
         }

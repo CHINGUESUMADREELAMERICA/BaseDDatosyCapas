@@ -45,9 +45,10 @@
             txtFolioCliente = new TextBox();
             cmbLoteConsultar = new ComboBox();
             gbDatosPropietario = new GroupBox();
+            txtApellidos = new TextBox();
+            label11 = new Label();
             txtCorreo = new TextBox();
             txtTelefono = new TextBox();
-            txtNombreCompleto = new TextBox();
             gbDatosTerreno = new GroupBox();
             btnVistaTerreno = new Button();
             txtFaltaAbonar = new TextBox();
@@ -65,6 +66,7 @@
             label15 = new Label();
             txtContraActual = new TextBox();
             pbLogo = new PictureBox();
+            txtNombre = new TextBox();
             gbDatosPropietario.SuspendLayout();
             gbDatosTerreno.SuspendLayout();
             gbContraseñas.SuspendLayout();
@@ -78,9 +80,9 @@
             label1.Location = new Point(31, 80);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(150, 22);
+            label1.Size = new Size(73, 22);
             label1.TabIndex = 0;
-            label1.Text = "Nombre completo";
+            label1.Text = "Nombre";
             // 
             // label2
             // 
@@ -255,10 +257,12 @@
             // gbDatosPropietario
             // 
             gbDatosPropietario.BackColor = SystemColors.ControlLightLight;
+            gbDatosPropietario.Controls.Add(txtNombre);
+            gbDatosPropietario.Controls.Add(txtApellidos);
+            gbDatosPropietario.Controls.Add(label11);
             gbDatosPropietario.Controls.Add(txtCorreo);
             gbDatosPropietario.Controls.Add(txtTelefono);
             gbDatosPropietario.Controls.Add(btnModificarCliente);
-            gbDatosPropietario.Controls.Add(txtNombreCompleto);
             gbDatosPropietario.Controls.Add(label4);
             gbDatosPropietario.Controls.Add(label1);
             gbDatosPropietario.Controls.Add(label2);
@@ -273,6 +277,26 @@
             gbDatosPropietario.TabIndex = 17;
             gbDatosPropietario.TabStop = false;
             gbDatosPropietario.Text = "Datos del propietario";
+            // 
+            // txtApellidos
+            // 
+            txtApellidos.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtApellidos.Location = new Point(551, 74);
+            txtApellidos.Margin = new Padding(4);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(291, 28);
+            txtApellidos.TabIndex = 25;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 10.8F);
+            label11.Location = new Point(460, 77);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(83, 22);
+            label11.TabIndex = 19;
+            label11.Text = "Apellidos";
             // 
             // txtCorreo
             // 
@@ -293,15 +317,6 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(277, 28);
             txtTelefono.TabIndex = 17;
-            // 
-            // txtNombreCompleto
-            // 
-            txtNombreCompleto.Font = new Font("Microsoft Sans Serif", 10.8F);
-            txtNombreCompleto.Location = new Point(256, 73);
-            txtNombreCompleto.Margin = new Padding(4);
-            txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(586, 28);
-            txtNombreCompleto.TabIndex = 16;
             // 
             // gbDatosTerreno
             // 
@@ -428,6 +443,7 @@
             lbCerrarSesion.Size = new Size(113, 20);
             lbCerrarSesion.TabIndex = 19;
             lbCerrarSesion.Text = "Cerrar Sesión";
+            lbCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // gbContraseñas
             // 
@@ -514,6 +530,15 @@
             pbLogo.TabIndex = 24;
             pbLogo.TabStop = false;
             // 
+            // txtNombre
+            // 
+            txtNombre.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtNombre.Location = new Point(124, 77);
+            txtNombre.Margin = new Padding(4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(291, 28);
+            txtNombre.TabIndex = 26;
+            // 
             // FCliente
             // 
             AutoScaleDimensions = new SizeF(10F, 22F);
@@ -531,6 +556,7 @@
             Margin = new Padding(4);
             Name = "FCliente";
             Text = "Inicio de sesión como cliente";
+            Load += FCliente_Load;
             gbDatosPropietario.ResumeLayout(false);
             gbDatosPropietario.PerformLayout();
             gbDatosTerreno.ResumeLayout(false);
@@ -581,5 +607,8 @@
         private TextBox txtContraActual;
         private PictureBox pbLogo;
         private Button btnVistaTerreno;
+        private TextBox txtApellidos;
+        private Label label11;
+        private TextBox txtNombre;
     }
 }

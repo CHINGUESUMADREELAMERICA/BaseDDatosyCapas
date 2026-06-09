@@ -98,12 +98,18 @@ namespace CapaPresentacion
         {
             try
             {
+                // Desconectar el evento para evitar el ciclo infinito
+                cmbBuscar.SelectedIndexChanged -= cmbBuscar_SelectedIndexChanged;
+
                 cmbBuscar.Items.Clear();
                 cmbBuscar.Items.Add("-- Todos --");
                 foreach (var c in nCliente.ObtenerTodos())
                     if (!string.IsNullOrWhiteSpace(c.Folio))
                         cmbBuscar.Items.Add(c.Folio);
                 cmbBuscar.SelectedIndex = 0;
+
+                // Reconectar el evento
+                cmbBuscar.SelectedIndexChanged += cmbBuscar_SelectedIndexChanged;
             }
             catch (Exception ex) { MessageBox.Show("Error al cargar folios: " + ex.Message); }
         }
@@ -139,11 +145,9 @@ namespace CapaPresentacion
             {
                 if (vistaActual == "Clientes")
                 {
-                    var nuevo = new DCliente();
-                    var lista = (List<DCliente>)dtgDatos.DataSource;
-                    lista.Add(nuevo);
-                    dtgDatos.DataSource = null;
-                    dtgDatos.DataSource = lista;
+                    MessageBox.Show("Para agregar clientes contacta al administrador del sistema.",
+                        "No permitido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
                 else if (vistaActual == "Empleados")
                 {
@@ -162,7 +166,6 @@ namespace CapaPresentacion
                     dtgDatos.DataSource = lista;
                 }
 
-                // Ir a la última fila
                 if (dtgDatos.Rows.Count > 0)
                     dtgDatos.FirstDisplayedScrollingRowIndex = dtgDatos.Rows.Count - 1;
             }

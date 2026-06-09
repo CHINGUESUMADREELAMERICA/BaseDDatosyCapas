@@ -215,6 +215,7 @@
             Controls.Add(gbAcciones);
             Name = "FTerreno";
             Text = "Vista general del terreno";
+            Load += FTerreno_Load;
             gbAcciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgDatos).EndInit();
             ResumeLayout(false);

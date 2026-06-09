@@ -35,6 +35,7 @@
             label7 = new Label();
             txtContraActual = new TextBox();
             gbAcciones = new GroupBox();
+            btnRegistrarPago = new Button();
             btnLimpiar = new Button();
             btnModificar = new Button();
             dtgDatos = new DataGridView();
@@ -45,9 +46,7 @@
             gbDatosEmpleado = new GroupBox();
             txtCorreo = new TextBox();
             txtTelefono = new TextBox();
-            txtNombreCompleto = new TextBox();
             label4 = new Label();
-            label1 = new Label();
             label2 = new Label();
             txtFolioEmpleado = new TextBox();
             label3 = new Label();
@@ -56,7 +55,10 @@
             label5 = new Label();
             pbLogo = new PictureBox();
             lblCargo = new Label();
-            btnRegistrarPago = new Button();
+            label1 = new Label();
+            txtApellidos = new TextBox();
+            txtNombre = new TextBox();
+            label8 = new Label();
             gbContraseñas.SuspendLayout();
             gbAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatos).BeginInit();
@@ -154,6 +156,22 @@
             gbAcciones.TabIndex = 30;
             gbAcciones.TabStop = false;
             gbAcciones.Text = "Acciones";
+            // 
+            // btnRegistrarPago
+            // 
+            btnRegistrarPago.BackColor = Color.FromArgb(140, 74, 30);
+            btnRegistrarPago.Cursor = Cursors.Hand;
+            btnRegistrarPago.FlatStyle = FlatStyle.Popup;
+            btnRegistrarPago.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrarPago.ForeColor = SystemColors.ControlLightLight;
+            btnRegistrarPago.Location = new Point(20, 172);
+            btnRegistrarPago.Margin = new Padding(4);
+            btnRegistrarPago.Name = "btnRegistrarPago";
+            btnRegistrarPago.Size = new Size(151, 36);
+            btnRegistrarPago.TabIndex = 35;
+            btnRegistrarPago.Text = "Registrar pago";
+            btnRegistrarPago.UseVisualStyleBackColor = false;
+            btnRegistrarPago.Click += btnRegistrarPago_Click;
             // 
             // btnLimpiar
             // 
@@ -260,11 +278,13 @@
             // gbDatosEmpleado
             // 
             gbDatosEmpleado.BackColor = SystemColors.ControlLightLight;
+            gbDatosEmpleado.Controls.Add(label1);
+            gbDatosEmpleado.Controls.Add(txtApellidos);
+            gbDatosEmpleado.Controls.Add(txtNombre);
+            gbDatosEmpleado.Controls.Add(label8);
             gbDatosEmpleado.Controls.Add(txtCorreo);
             gbDatosEmpleado.Controls.Add(txtTelefono);
-            gbDatosEmpleado.Controls.Add(txtNombreCompleto);
             gbDatosEmpleado.Controls.Add(label4);
-            gbDatosEmpleado.Controls.Add(label1);
             gbDatosEmpleado.Controls.Add(label2);
             gbDatosEmpleado.Controls.Add(txtFolioEmpleado);
             gbDatosEmpleado.Controls.Add(label3);
@@ -298,15 +318,6 @@
             txtTelefono.Size = new Size(277, 27);
             txtTelefono.TabIndex = 17;
             // 
-            // txtNombreCompleto
-            // 
-            txtNombreCompleto.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            txtNombreCompleto.Location = new Point(248, 73);
-            txtNombreCompleto.Margin = new Padding(4);
-            txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(586, 27);
-            txtNombreCompleto.TabIndex = 16;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -317,17 +328,6 @@
             label4.Size = new Size(45, 20);
             label4.TabIndex = 3;
             label4.Text = "Folio";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            label1.Location = new Point(25, 82);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(141, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre completo";
             // 
             // label2
             // 
@@ -373,6 +373,7 @@
             lbCerrarSesion.Size = new Size(113, 20);
             lbCerrarSesion.TabIndex = 26;
             lbCerrarSesion.Text = "Cerrar Sesión";
+            lbCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // lbBienvenido
             // 
@@ -422,21 +423,45 @@
             lblCargo.TabIndex = 19;
             lblCargo.Text = "Puesto";
             // 
-            // btnRegistrarPago
+            // label1
             // 
-            btnRegistrarPago.BackColor = Color.FromArgb(140, 74, 30);
-            btnRegistrarPago.Cursor = Cursors.Hand;
-            btnRegistrarPago.FlatStyle = FlatStyle.Popup;
-            btnRegistrarPago.Font = new Font("Microsoft Sans Serif", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegistrarPago.ForeColor = SystemColors.ControlLightLight;
-            btnRegistrarPago.Location = new Point(20, 172);
-            btnRegistrarPago.Margin = new Padding(4);
-            btnRegistrarPago.Name = "btnRegistrarPago";
-            btnRegistrarPago.Size = new Size(151, 36);
-            btnRegistrarPago.TabIndex = 35;
-            btnRegistrarPago.Text = "Registrar pago";
-            btnRegistrarPago.UseVisualStyleBackColor = false;
-            btnRegistrarPago.Click += btnRegistrarPago_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 10.1999989F);
+            label1.Location = new Point(437, 90);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(77, 20);
+            label1.TabIndex = 39;
+            label1.Text = "Apellidos";
+            // 
+            // txtApellidos
+            // 
+            txtApellidos.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtApellidos.Location = new Point(535, 82);
+            txtApellidos.Margin = new Padding(4);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(291, 28);
+            txtApellidos.TabIndex = 40;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtNombre.Location = new Point(122, 82);
+            txtNombre.Margin = new Padding(4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(291, 28);
+            txtNombre.TabIndex = 38;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 10.1999989F);
+            label8.Location = new Point(33, 90);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(68, 20);
+            label8.TabIndex = 37;
+            label8.Text = "Nombre";
             // 
             // FEmpleado
             // 
@@ -457,6 +482,7 @@
             Controls.Add(lbBienvenido);
             Name = "FEmpleado";
             Text = "Inicio de sesión como empleado";
+            Load += FEmpleado_Load;
             gbContraseñas.ResumeLayout(false);
             gbContraseñas.PerformLayout();
             gbAcciones.ResumeLayout(false);
@@ -488,9 +514,7 @@
         private GroupBox gbDatosEmpleado;
         private TextBox txtCorreo;
         private TextBox txtTelefono;
-        private TextBox txtNombreCompleto;
         private Label label4;
-        private Label label1;
         private Label label2;
         private TextBox txtFolioEmpleado;
         private Label label3;
@@ -500,5 +524,9 @@
         private PictureBox pbLogo;
         private Label lblCargo;
         private Button btnRegistrarPago;
+        private Label label1;
+        private TextBox txtApellidos;
+        private TextBox txtNombre;
+        private Label label8;
     }
 }

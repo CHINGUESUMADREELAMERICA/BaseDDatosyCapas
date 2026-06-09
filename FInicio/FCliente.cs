@@ -22,11 +22,14 @@ namespace CapaPresentacion
         {
             try
             {
-                lbBienvenido.Text = "Bienvenid@, " + $"{clienteActual.Nombre} {clienteActual.Apellidos}";
+                lbBienvenido.Text = $"Bienvenid@ {clienteActual.Nombre} {clienteActual.Apellidos}";
                 txtFolioCliente.Text = clienteActual.Folio;
-                txtNombreCompleto.Text = $"{clienteActual.Nombre} {clienteActual.Apellidos}";
                 txtTelefono.Text = clienteActual.Telefono;
                 txtCorreo.Text = clienteActual.Correo;
+
+                txtNombre.Text = clienteActual.Nombre;
+                txtApellidos.Text = clienteActual.Apellidos;
+
                 CargarComboLotes();
             }
             catch (Exception ex) { MessageBox.Show("Error al cargar datos: " + ex.Message); }
@@ -99,11 +102,8 @@ namespace CapaPresentacion
                 if (MessageBox.Show("¿Confirmas modificar tus datos?", "Confirmar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
 
-                var partes = txtNombreCompleto.Text.Trim().Split(' ');
-                clienteActual.Nombre = partes.Length > 0 ? partes[0] : clienteActual.Nombre;
-                clienteActual.Apellidos = partes.Length > 1
-                    ? string.Join(" ", partes, 1, partes.Length - 1)
-                    : clienteActual.Apellidos;
+                clienteActual.Nombre = txtNombre.Text.Trim();
+                clienteActual.Apellidos = txtApellidos.Text.Trim();
                 clienteActual.Telefono = txtTelefono.Text.Trim();
                 clienteActual.Correo = txtCorreo.Text.Trim();
 

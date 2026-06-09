@@ -34,7 +34,6 @@
             gbDatosPropietario = new GroupBox();
             txtCorreo = new TextBox();
             txtTelefono = new TextBox();
-            txtNombreCompleto = new TextBox();
             label4 = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -60,6 +59,9 @@
             lblFiltroFolio = new Label();
             cmbBuscar = new ComboBox();
             lblCargo = new Label();
+            txtNombre = new TextBox();
+            txtApellidos = new TextBox();
+            label5 = new Label();
             gbDatosPropietario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             gbQueBuscas.SuspendLayout();
@@ -110,13 +112,16 @@
             lbCerrarSesion.Size = new Size(113, 20);
             lbCerrarSesion.TabIndex = 20;
             lbCerrarSesion.Text = "Cerrar Sesión";
+            lbCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // gbDatosPropietario
             // 
             gbDatosPropietario.BackColor = SystemColors.ControlLightLight;
+            gbDatosPropietario.Controls.Add(label5);
+            gbDatosPropietario.Controls.Add(txtApellidos);
+            gbDatosPropietario.Controls.Add(txtNombre);
             gbDatosPropietario.Controls.Add(txtCorreo);
             gbDatosPropietario.Controls.Add(txtTelefono);
-            gbDatosPropietario.Controls.Add(txtNombreCompleto);
             gbDatosPropietario.Controls.Add(label4);
             gbDatosPropietario.Controls.Add(label1);
             gbDatosPropietario.Controls.Add(label2);
@@ -152,15 +157,6 @@
             txtTelefono.Size = new Size(277, 27);
             txtTelefono.TabIndex = 17;
             // 
-            // txtNombreCompleto
-            // 
-            txtNombreCompleto.Font = new Font("Microsoft Sans Serif", 10.1999989F);
-            txtNombreCompleto.Location = new Point(265, 67);
-            txtNombreCompleto.Margin = new Padding(4);
-            txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(586, 27);
-            txtNombreCompleto.TabIndex = 16;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -179,9 +175,9 @@
             label1.Location = new Point(41, 75);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(141, 20);
+            label1.Size = new Size(68, 20);
             label1.TabIndex = 0;
-            label1.Text = "Nombre completo";
+            label1.Text = "Nombre";
             // 
             // label2
             // 
@@ -492,6 +488,35 @@
             lblCargo.TabIndex = 19;
             lblCargo.Text = "Nombre completo";
             // 
+            // txtNombre
+            // 
+            txtNombre.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtNombre.Location = new Point(130, 67);
+            txtNombre.Margin = new Padding(4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(291, 28);
+            txtNombre.TabIndex = 26;
+            // 
+            // txtApellidos
+            // 
+            txtApellidos.Font = new Font("Microsoft Sans Serif", 10.8F);
+            txtApellidos.Location = new Point(543, 67);
+            txtApellidos.Margin = new Padding(4);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(291, 28);
+            txtApellidos.TabIndex = 36;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 10.1999989F);
+            label5.Location = new Point(445, 75);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 20);
+            label5.TabIndex = 36;
+            label5.Text = "Apellidos";
+            // 
             // FGerente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -512,6 +537,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FGerente";
             Text = "Inicio de sesión como gerente";
+            Load += FGerente_Load;
             gbDatosPropietario.ResumeLayout(false);
             gbDatosPropietario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
@@ -532,7 +558,6 @@
         private GroupBox gbDatosPropietario;
         private TextBox txtCorreo;
         private TextBox txtTelefono;
-        private TextBox txtNombreCompleto;
         private Label label4;
         private Label label1;
         private Label label2;
@@ -558,5 +583,8 @@
         private ComboBox cmbBuscar;
         private Label lblCargo;
         private Button btnRegistrarPago;
+        private Label label5;
+        private TextBox txtApellidos;
+        private TextBox txtNombre;
     }
 }
